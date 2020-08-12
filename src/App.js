@@ -1,7 +1,7 @@
 import React from 'react';
 
-function FREITAG({name, url}){
-return <a href={url}>{name}</a>
+function renderBags(bags){
+return <a href={bags.url}>{bags.name}</a>
 }
 
 
@@ -23,7 +23,7 @@ const bags = [
 
 function App() {
   return <div>
-    {bags.map(bag => <FREITAG name={bag.name} url={bag.url}/>)}
+    {bags.map(renderBags)}
     </div>
 }
 export default App;
